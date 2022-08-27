@@ -69,9 +69,9 @@ public class ItemGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(this.transform.position.z < this.myCamera.transform.position.z)
+       if(carPrefab.transform.position.z < this.myCamera.transform.position.z)
         {
-            Destroy(this.gameObject);
+            Destroy(carPrefab);
         }
     }
    
