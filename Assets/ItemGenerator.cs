@@ -16,14 +16,10 @@ public class ItemGenerator : MonoBehaviour
     private int goalPos = 360;
     //アイテムを出すx方向の範囲
     private float posRange = 3.4f;
-    //メインカメラのオブジェクト
-    private GameObject myCamera;
 
     // Start is called before the first frame update
     void Start()
     {
-        //カメラのオブジェクトを取得
-        this.myCamera = GameObject.Find("Main Camera");
         //一定の距離ごとにアイテムを生成
         for(int i = startPos; i < goalPos; i+=15)
         {
@@ -69,10 +65,7 @@ public class ItemGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(carPrefab.transform.position.z < this.myCamera.transform.position.z)
-        {
-            Destroy(carPrefab);
-        }
+     
     }
    
 }
